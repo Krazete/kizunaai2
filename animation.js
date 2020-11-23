@@ -377,8 +377,7 @@ $(function() {
 			$mycAnimationArea.width(),
 			$mycAnimationArea.height()
 		);
-
-
+		renderer.xr.enabled = true;
 
 		camera.position.x = defaultCamera.position.x;
 		camera.position.y = defaultCamera.position.y;
@@ -523,7 +522,6 @@ $(function() {
 		);
 
 		document.body.appendChild( VRButton.createButton( renderer ) );
-		renderer.xr.enabled = true;
 		renderer.setAnimationLoop( function () {
 			var delta = clock.getDelta();
 
