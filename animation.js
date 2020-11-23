@@ -1,3 +1,4 @@
+import {MMDLoader} from './MMDLoader.js';
 import {VRButton} from './VRButton.js';
 
 var instances;
@@ -411,7 +412,7 @@ $(function() {
 		helper.enable('cameraAnimation', false);
 
 
-		var loader = new THREE.MMDLoader();
+		var loader = new MMDLoader();
 		var isFirstPlay = true;
 		var isHelperReady = false;
 		var readyHelpers = 0;
