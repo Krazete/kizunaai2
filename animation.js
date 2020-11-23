@@ -523,7 +523,7 @@ $(function() {
 		);
 
 		document.body.appendChild( VRButton.createButton( renderer ) );
-		renderer.xr.enabled = true;
+		// renderer.xr.enabled = true;
 		renderer.setAnimationLoop( function () {
 			var delta = clock.getDelta();
 
