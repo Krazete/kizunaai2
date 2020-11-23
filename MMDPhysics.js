@@ -1,6 +1,4 @@
 /**
- * @author takahiro / https://github.com/takahirox
- *
  * Dependencies
  *  - Ammo.js https://github.com/kripken/ammo.js
  *
@@ -941,14 +939,14 @@ THREE.MMDPhysics = ( function () {
 
 			if ( params.type === 0 ) {
 
-				// body.setCollisionFlags( body.getCollisionFlags() | 2 );
+				body.setCollisionFlags( body.getCollisionFlags() | 2 );
 
 				/*
 				 * It'd be better to comment out this line though in general I should call this method
 				 * because I'm not sure why but physics will be more like MMD's
 				 * if I comment out.
 				 */
-				// body.setActivationState( 4 );
+				body.setActivationState( 4 );
 
 			}
 
@@ -1312,7 +1310,7 @@ THREE.MMDPhysics = ( function () {
 						.copy( mesh.matrixWorld )
 						.decompose( position, quaternion, scale )
 						.compose( position, quaternion, scale.set( 1, 1, 1 ) )
-						.getInverse( matrixWorldInv );
+						.invert();
 
 					for ( var i = 0, il = bodies.length; i < il; i ++ ) {
 
