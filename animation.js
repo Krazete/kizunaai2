@@ -1,3 +1,5 @@
+import {VRButton} from './VRButton.js';
+
 var instances;
 $(function() {
 	var $myc = $('#myc');
@@ -334,43 +336,6 @@ $(function() {
 
 	var vmdPlayList = [1];
 	var vmdPlayIndex = 0;
-	var vmdTestNumber = 0;
-
-	if (vmdTestNumber) {
-		vmdPlayList = [vmdTestNumber];
-	}
-	else if (urlParameters['vmd']) {
-		vmdPlayList = [urlParameters['vmd']];
-	}
-	else {
-		if ($myc.hasClass('type-biography')) {
-			vmdPlayList = [1];
-		}
-		else if ($myc.hasClass('type-contact')) {
-			vmdPlayList = [4];
-		}
-		else if ($myc.hasClass('type-news')) {
-			vmdPlayList = [12];
-
-			if ($myc.find('#myc-contents .news-list.detail').length) {
-				// detail
-				vmdPlayList = [17];
-			}
-		}
-		else if ($myc.hasClass('type-top')) {
-			vmdPlayList = [8];
-		}
-		else if ($myc.hasClass('type-youtube')) {
-			if ($myc.hasClass('second')) {
-				// Games
-				vmdPlayList = [16];
-			}
-			else {
-				// Channel, China
-				vmdPlayList = [13];
-			}
-		}
-	}
 
 	for (var i = vmdPlayList.length - 1; i > 0; i--) {
 		var r = Math.floor(Math.random() * (i + 1));
@@ -439,7 +404,7 @@ $(function() {
 
 
 		var helper = new THREE.MMDAnimationHelper();
-		xp=helper;
+		// xp=helper;
 
 
 		helper.enable('ik', false);
@@ -551,7 +516,6 @@ $(function() {
 
 		motionAction();
 
-
 		scene.fog = new THREE.Fog(
 			0x000000,
 			150 * 0.5,
@@ -641,7 +605,6 @@ $(function() {
 		};
 
 		renderScene();
-
 
 		var onResize = function() {
 			if ($myc.hasClass('history-bg-fix')) {
