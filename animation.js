@@ -22,7 +22,7 @@ $(function() {
 				'rotationY': 0,
 				'positionX': 0,
 				'cameraZ': 10,
-				'cameraY': 6
+				'cameraY': 100
 			},
 			'isHidden': true,
 		}
