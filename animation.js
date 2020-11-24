@@ -19,269 +19,13 @@ $(function() {
 				'cameraY': 10
 			},
 			'sp': {
-				'rotationY': 95,
-				'positionX': -18,
-				'cameraZ': 45,
+				'rotationY': 0,
+				'positionX': 0,
+				'cameraZ': 10,
 				'cameraY': 6
 			},
 			'isHidden': true,
-		},
-		2: {
-			'fileName': 'biography02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 115,
-				'positionX': -20,
-				'cameraZ': 30,
-				'cameraY': 9
-			},
-			'sp': {
-				'rotationY': 95,
-				'positionX': -14,
-				'cameraZ': 45,
-				'cameraY': 5
-			},
-			'isHidden': false
-		},
-		3: {
-			'fileName': 'contact01_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 30,
-				'positionX': -5,
-				'cameraZ': 15,
-				'cameraY': 19
-			},
-			'sp': {
-				'rotationY': 30,
-				'positionX': -5,
-				'cameraZ': 15,
-				'cameraY': 20
-			},
-			'isHidden': false
-		},
-		4: {
-			'fileName': 'contact02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 75,
-				'positionX': -11,
-				'cameraZ': 15,
-				'cameraY': 19
-			},
-			'sp': {
-				'rotationY': 75,
-				'positionX': -11,
-				'cameraZ': 13,
-				'cameraY': 21
-			},
-			'isHidden': false
-		},
-		5: {
-			'fileName': 'contact03_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 90,
-				'positionX': -13,
-				'cameraZ': 15,
-				'cameraY': 19
-			},
-			'sp': {
-				'rotationY': 90,
-				'positionX': -12,
-				'cameraZ': 15,
-				'cameraY': 20
-			},
-			'isHidden': false
-		},
-		6: {
-			'fileName': 'news01_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 22,
-				'positionX': -4,
-				'cameraZ': 10,
-				'cameraY': 16
-			},
-			'sp': {
-				'rotationY': -10,
-				'positionX': 2,
-				'cameraZ': 9,
-				'cameraY': 16
-			},
-			'isHidden': false
-		},
-		7: {
-			'fileName': 'news02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 26,
-				'positionX': -4,
-				'cameraZ': 10,
-				'cameraY': 16
-			},
-			'sp': {
-				'rotationY': -5,
-				'positionX': 2,
-				'cameraZ': 9,
-				'cameraY': 16
-			},
-			'isHidden': false
-		},
-		8: {
-			'fileName': 'iahigher2.vmd',
-			'pc': {
-				'rotationY': 175,
-				'positionX': 0,
-				'cameraZ': 35,
-				'cameraY': 13
-			},
-			'sp': {
-				'rotationY': 0,
-				'positionX': -1,
-				'cameraZ': 55,
-				'cameraY': 13
-			},
-			'isHidden': false
-		},
-		9: {
-			'fileName': 'top_left01_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 270,
-				'positionX': 24,
-				'cameraZ': 25,
-				'cameraY': 14
-			},
-			'sp': {
-				'rotationY': -90,
-				'positionX': 24,
-				'cameraZ': 20,
-				'cameraY': 15
-			},
-			'isHidden': false
-		},
-		10: {
-			'fileName': 'top_right01_FIX_Base.vmd',
-			'pc': {
-				'rotationY': 280,
-				'positionX': 0,
-				'cameraZ': 29,
-				'cameraY': 13
-			},
-			'sp': {
-				'rotationY': -80,
-				'positionX': 0,
-				'cameraZ': 26,
-				'cameraY': 13
-			},
-			'isHidden': false
-		},
-		11: {
-			'fileName': 'top_right02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 270,
-				'positionX': 23,
-				'cameraZ': 25,
-				'cameraY': 13
-			},
-			'sp': {
-				'rotationY': -90,
-				'positionX': 23,
-				'cameraZ': 25,
-				'cameraY': 13
-			},
-			'isHidden': false
-		},
-		12: {
-			'fileName': 'YoutubeAIC_01_02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 22,
-				'positionX': -4,
-				'cameraZ': 11,
-				'cameraY': 16
-			},
-			'sp': {
-				'rotationY': 5,
-				'positionX': 0,
-				'cameraZ': 11,
-				'cameraY': 16
-			},
-			'isHidden': false
-		},
-		13: {
-			'fileName': 'Youtube_AIC02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': -95,
-				'positionX': 11,
-				'cameraZ': 15,
-				'cameraY': 19
-			},
-			'sp': {
-				'rotationY': -95,
-				'positionX': 11,
-				'cameraZ': 15,
-				'cameraY': 21
-			},
-			'isHidden': false
-		},
-		14: {
-			'fileName': 'Youtube_AIG01_FIX.vmd',
-			'pc': {
-				'rotationY': 0,
-				'positionX': 0,
-				'cameraZ': 35,
-				'cameraY': 11
-			},
-			'sp': {
-				'rotationY': 0,
-				'positionX': 0,
-				'cameraZ': 35,
-				'cameraY': 11
-			},
-			'isHidden': false
-		},
-		15: {
-			'fileName': 'Youtube_AIG02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 25,
-				'positionX': -5,
-				'cameraZ': 14,
-				'cameraY': 19
-			},
-			'sp': {
-				'rotationY': 25,
-				'positionX': -5,
-				'cameraZ': 14,
-				'cameraY': 21
-			},
-			'isHidden': false
-		},
-		16: {
-			'fileName': 'Youtube_AIG03_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 100,
-				'positionX': -11,
-				'cameraZ': 14,
-				'cameraY': 19
-			},
-			'sp': {
-				'rotationY': 100,
-				'positionX': -11,
-				'cameraZ': 14,
-				'cameraY': 21
-			},
-			'isHidden': false
-		},
-		17: {
-			'fileName': 'Youtube_AIG02_FIX_Bake.vmd',
-			'pc': {
-				'rotationY': 22,
-				'positionX': -4,
-				'cameraZ': 11,
-				'cameraY': 16
-			},
-			'sp': {
-				'rotationY': -5,
-				'positionX': 2,
-				'cameraZ': 11,
-				'cameraY': 16
-			},
-			'isHidden': false
-		},
+		}
 	};
 
 
@@ -334,16 +78,8 @@ $(function() {
 		isPhysics = true;
 	}
 
-
 	var vmdPlayList = [1];
 	var vmdPlayIndex = 0;
-
-	for (var i = vmdPlayList.length - 1; i > 0; i--) {
-		var r = Math.floor(Math.random() * (i + 1));
-		var tmp = vmdPlayList[i];
-		vmdPlayList[i] = vmdPlayList[r];
-		vmdPlayList[r] = tmp;
-	}
 
 	window.onload = function() {
 		Ammo().then(function(AmmoLib) {
@@ -351,7 +87,6 @@ $(function() {
 			init();
 		});
 	};
-
 
 	var init = function() {
 		$mycAnimationArea[0].style.maxWidth="initial";
@@ -400,7 +135,7 @@ $(function() {
 			0x484848
 		);
 		gridHelper.visible = false;
-		// scene.add(gridHelper);
+		scene.add(gridHelper);
 
 
 		var helper = new THREE.MMDAnimationHelper();
