@@ -21,7 +21,7 @@ $(function() {
 			'sp': {
 				'rotationY': 0,
 				'positionX': 0,
-				'cameraZ': 10,
+				'cameraZ': 30,
 				'cameraY': 100
 			},
 			'isHidden': true,
@@ -72,10 +72,10 @@ $(function() {
 	var urlParameters = getUrlParameters();
 
 
-	var isPhysics = false;
+	var isPhysics = true;
 
-	if (urlParameters.physics == 'on') {
-		isPhysics = true;
+	if (urlParameters.physics == 'off') {
+		isPhysics = false;
 	}
 
 	var vmdPlayList = [1];
@@ -154,7 +154,7 @@ $(function() {
 		//var objectSource = null;
 		instances = [
 			{names: ['kizunaai.pmx', 'd2b/DivetoBlue_dance_iMarine_deci_R40.vmd']},
-			{names: ['kizunaai.pmx', 'd2b/DivetoBlue_dance_Umiko_deci_R40.vmd']}
+			{names: ['aige/aige.pmx', 'd2b/DivetoBlue_dance_Umiko_deci_R40.vmd']}
 		];
 
 		var motionAction = function() {
