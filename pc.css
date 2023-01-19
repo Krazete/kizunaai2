@@ -2927,3 +2927,18 @@ html.remodal-is-locked #myc #myc-pagetop .pagetop
 	transition-delay: 0s !important;
 	transition-duration: 0s !important;
 }
+
+#play-button {
+	position: absolute;
+	background: white;
+	left: 50%;
+	top: 50%;
+	padding: 10px;
+	border-radius: 5px;
+	transform: translate(-50%, -50%);
+	z-index: 999;
+}
+
+.hidden {
+	display: none;
+}

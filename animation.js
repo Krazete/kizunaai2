@@ -28,7 +28,6 @@ $(function() {
 		}
 	};
 
-
 	var defaultCamera = {
 		position: {
 			x: 0,
@@ -37,7 +36,6 @@ $(function() {
 		},
 		lookAt: new THREE.Vector3(0, 11, 0)
 	};
-
 
 	var targetCameraPosition = {
 		x: 0,
@@ -51,7 +49,6 @@ $(function() {
 			targetCameraPosition.y = -e.y * 3 + defaultCamera.position.y;
 		};
 	}
-
 
 	var getUrlParameters = function () {
 		var parameters = [];
@@ -70,7 +67,6 @@ $(function() {
 	}
 
 	var urlParameters = getUrlParameters();
-
 
 	var isPhysics = true;
 
@@ -104,7 +100,6 @@ $(function() {
 			1000
 		);
 
-
 		var renderer = new THREE.WebGLRenderer({antialias: true});
 		renderer.setClearColor(new THREE.Color(0x000000));
 		renderer.setPixelRatio(window.devicePixelRatio);
@@ -119,16 +114,12 @@ $(function() {
 		camera.position.y = defaultCamera.position.y;
 		camera.position.z = defaultCamera.position.z;
 
-
 		camera.lookAt(defaultCamera.lookAt);
-
 
 		var ambientLight = new THREE.AmbientLight(0xeeeeee);
 		scene.add(ambientLight);
 
-
-		var gridHelper = new THREE.GridHelper
-		(
+		var gridHelper = new THREE.GridHelper(
 			400,
 			40,
 			0x484848,
@@ -137,15 +128,12 @@ $(function() {
 		gridHelper.visible = false;
 		scene.add(gridHelper);
 
-
 		var helper = new THREE.MMDAnimationHelper();
 		// xp=helper;
-
 
 		helper.enable('ik', false);
 		helper.enable('physics', isPhysics);
 		helper.enable('cameraAnimation', false);
-
 
 		var loader = new MMDLoader();
 		var isFirstPlay = true;
@@ -226,7 +214,7 @@ $(function() {
 								if (vmdData.isHidden) {
 									instance.object.visible = false;
 								}
-
+						
 								setTimeout(
 									function() {
 										motionAction();
@@ -251,11 +239,35 @@ $(function() {
 
 		motionAction();
 
+		// create an AudioListener and add it to the camera
+		const listener = new THREE.AudioListener();
+		camera.add( listener );
+
+		// create a global audio source
+		const sound = new THREE.Audio( listener );
+
+		// load a sound and set it as the Audio object's buffer
+		const audioLoader = new THREE.AudioLoader();
+		audioLoader.load( './models/d2b/d2b.ogg', function( buffer ) {
+			sound.setBuffer( buffer );
+			sound.setLoop( false );
+			sound.setVolume( 0.25 );
+		});
+
 		scene.fog = new THREE.Fog(
 			0x000000,
 			150 * 0.5,
 			150
 		);
+
+		var play = document.getElementById("play-button");
+		play.addEventListener("click", function () {
+			play.remove();
+			for (var instance of instances) {
+				instance.animation.play();
+			}
+			sound.play();
+		});
 
 		document.body.appendChild( VRButton.createButton( renderer ) );
 		renderer.setAnimationLoop( function () {
@@ -282,22 +294,17 @@ $(function() {
 				else {
 					if (clock.elapsedTime - clockHelperReadyTime > 0.5) {
 						gridHelper.visible = true;
-						for (var instance of instances) {
-							instance.animation.play();
-						}
+
+						play.classList.remove("hidden");
 					}
 				}
-
 				helper.update(delta);
 			}
-
 			renderer.render(scene, camera);
 		} );
 
-
 		// add the output of the renderer to the html element
 		document.getElementById("myc-animation-area").appendChild(renderer.domElement);
-
 
 		var clockHelperReadyTime = -1;
 
@@ -330,7 +337,6 @@ $(function() {
 						}
 					}
 				}
-
 				helper.update(delta);
 			}
 
@@ -338,13 +344,10 @@ $(function() {
 			requestAnimationFrame(renderScene);
 		};
 
-		renderScene();
-
 		var onResize = function() {
 			if ($myc.hasClass('history-bg-fix')) {
 				return;
 			}
-
 			camera.aspect = $mycAnimationArea.width() / $mycAnimationArea.height();
 			camera.updateProjectionMatrix();
 			renderer.setPixelRatio(window.devicePixelRatio);
@@ -357,6 +360,14 @@ $(function() {
 		window.addEventListener('resize', onResize, false);
 
 		window.addEventListener("keydown", function(k) {
+			if (k.keyCode == 32) {
+				if (sound.isPlaying) {
+					sound.pause();
+				}
+				else {
+					sound.play();
+				}
+			}
 			instances.forEach(e => {
 				if (k.keyCode == 78) {
 					e.animation.time = 0;
@@ -365,6 +376,7 @@ $(function() {
 					e.animation.time = 138;
 				}
 				if (k.keyCode == 32) {
+					console.log(e.animation);
 					e.animation.paused = !e.animation.paused;
 				}
 				if (k.keyCode == 37) {
@@ -377,6 +389,5 @@ $(function() {
 			});
 			console.log(instances[0].animation.time);
 		});
-
 	};
 });
