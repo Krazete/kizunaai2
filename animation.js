@@ -170,8 +170,8 @@ $(function() {
 				}
 
 				loader.loadWithAnimation(
-					mycAssetsPath + 'models/' + instance.names[0],
-					mycAssetsPath + 'models/' + instance.names[1],
+					mycAssetsPath + instance.names[0],
+					mycAssetsPath + instance.names[1],
 					function(object) {
 						instance.object = object.mesh;
 
