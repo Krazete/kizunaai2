@@ -29,9 +29,9 @@ import {
 	Uint16BufferAttribute,
 	Vector3,
 	VectorKeyframeTrack
-} from "../three.module.js";
-import { TGALoader } from "../TGALoader.js";
-import { MMDParser } from "../mmdparser.module.js";
+} from "/three.module.js";
+import { TGALoader } from "/TGALoader.js";
+import { MMDParser } from "/mmdparser.module.js";
 
 /**
  * Dependencies

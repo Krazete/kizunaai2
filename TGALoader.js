@@ -2,7 +2,7 @@ import {
 	FileLoader,
 	Loader,
 	Texture
-} from "../three.module.js";
+} from "/three.module.js";
 
 var TGALoader = function ( manager ) {
 
